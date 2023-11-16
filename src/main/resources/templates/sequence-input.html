@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sequence Input</title>
+</head>
+<body>
+
+<h2>Enter a sequence:</h2>
+<form th:object="${sequenceModel}" th:action="@{/sequence-input}" method="post">
+    <label for="sequence">Sequence:</label>
+    <input type="text" id="sequence" name="sequence" th:field="*{sequence}" required>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
